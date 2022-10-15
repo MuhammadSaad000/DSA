@@ -7,6 +7,7 @@ using namespace std;
 bool isUnique(string s);
 bool checkPermutation(string s1, string s2);
 void swap(string&, string&);
+string sortString(string&);
 
 int main()
 {
@@ -42,31 +43,16 @@ bool isUnique(string s)
 	return true;
 }
 
-bool checkPermutation(string s1, string s2) 
-{ 
+bool checkPermutation(string s1, string s2)
+{
 	if (s1.size() != s2.size())
 		return false;
 	else
 	{
 		//sorting the strings brute force 
-		for (int i = 0; i < s1.length(); i++)
-		{
-			for (int j = 0; j < s1.length(); j++) {
-				if (s1[j] > s1[j + 1]) {
-					swap(s1[j], s1[j + 1]);
-				}
-			}
+		s1 = sortString(s1);
+		s2 = sortString(s2);
 
-		}
-
-		for (int i = 0; i < s2.length(); i++)
-		{
-			for (int j = 0; j < s2.length(); j++) {
-				if (s2[j] > s2[j + 1]) {
-					swap(s2[j], s2[j + 1]);
-				}
-			}
-		}
 		if (s1._Equal(s2)) {
 			return true;
 		}
@@ -77,9 +63,21 @@ bool checkPermutation(string s1, string s2)
 	}
 }
 
-void swap(string &a, string &b)
+void swap(string& a, string& b)
 {
 	string temp = a;
 	a = b;
 	b = temp;
+}
+
+string sortString(string &s)
+{
+	for (int i = 0; i < s.length(); i++) {
+		for (int j = 0; j < s.length(); j++) {
+			if (s[j] > s[j + 1]) {
+				swap(s[j], s[j + 1]);
+			}
+		}
+	}
+	return s;
 }
