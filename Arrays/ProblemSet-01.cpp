@@ -73,15 +73,18 @@ void MergeSortedArrays(int arr1[], int size1, int arr2[], int size2,int arr3[])
 
 void MoveZeros(int arr[], int n)
 {
-	
-	int nonZero = 0;
-	for (int i = 0; i < n; i++) {
-		if (arr[i] != 0) {
-			swap(arr[i], arr[nonZero]);
-			nonZero++;
+	//right moves in every round 
+	//left moves when non zero digit is encountered
+	int left = 0,right = 0;
+	for (right; right < n; right++) {
+		if (arr[right] != 0) {
+			swap(arr[left], arr[right]);
+			left++;
 		}
 	}
 	
+
+
 	for (int i = 0; i < n; i++) {
 		cout << arr[i] << '\t';
 	}
