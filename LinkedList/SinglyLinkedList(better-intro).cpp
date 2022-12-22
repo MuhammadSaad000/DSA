@@ -55,13 +55,21 @@ void InsertAtTail(Node*& tail, int data)
 
 int LengthOfList(Node*& head)
 {
-	Node* temp = head;
-	int count = 1;
-	while (temp != NULL) {
-		temp = temp->next;
-		count++;
+	if (head == NULL) {
+		return 0;
 	}
-	return count;
+	if (head->next == NULL) {
+		return 1;
+	}
+	else {
+		Node* temp = head;
+		int count = 0;
+		while (temp != NULL) {
+			temp = temp->next;
+			count++;
+		}
+		return count;
+	}
 }
 
 void InsertAtMid(Node*& head,Node* tail, int position, int data)

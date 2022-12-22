@@ -48,13 +48,21 @@ void PrintList(Node*& head)
 
 int GetLength(Node*& head)
 {
-	Node* temp = head;
-	int len = 0;
-	while (temp != NULL) {
-		len++;
-		temp = temp->next;
+	if (head == NULL) {
+		return 0;
 	}
-	return len;
+	if (head->next == NULL) {
+		return 1;
+	}
+	else {
+		Node* temp = head;
+		int count = 0;
+		while (temp != NULL) {
+			temp = temp->next;
+			count++;
+		}
+		return count;
+	}
 }
 
 
