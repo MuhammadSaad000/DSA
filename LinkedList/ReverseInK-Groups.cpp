@@ -22,7 +22,7 @@ public:
 
 
 //Problem Discussed : Find Mid of Linked List 
-// https://leetcode.com/problems/middle-of-the-linked-list/
+// https://leetcode.com/problems/reverse-nodes-in-k-group
 //File Completed on : December 23,2022 ;author: Muhammad Saad
 Node* ReverseKGroup(Node*& head,int k);
 void InsertAtHead(Node*& head, int data);
