@@ -1,8 +1,9 @@
 #include<iostream>
 using namespace std;
 
-//File completed on : December 27, 2022.
-//Detect and Remove cycle in Linked List 
+// File completed on : December 27, 2022.
+// Remove Duplicates from a Sorted Linked List 
+// Problem Link: https://leetcode.com/problems/remove-duplicates-from-sorted-list/
 
 class Node {
 public:
