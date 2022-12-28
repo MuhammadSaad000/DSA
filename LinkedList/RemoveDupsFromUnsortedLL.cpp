@@ -1,5 +1,4 @@
 #include<iostream>
-#include<stack>
 using namespace std;
 
 // File completed on : December 28, 2022.
