@@ -27,6 +27,7 @@ void PrintLevel(Node*& root,int level);	//which level you want to print
 void PrintLevelOrder(Node*& root);
 vector<vector<int>> LevelOrderTraversal(Node*& root);
 
+// Maximum Depth or Height of tree : https://leetcode.com/problems/maximum-depth-of-binary-tree/
 int HeightOfTree(Node*& root)
 {
 	//base case
@@ -35,9 +36,10 @@ int HeightOfTree(Node*& root)
 	
 	int leftHeight = HeightOfTree(root->left);
 	int rightHeight = HeightOfTree(root->right);
-
+		
+	//getting maximum because height or depth is maximum 
 	if (leftHeight >= rightHeight)
-		return leftHeight + 1;	//simply adding 1 for each level
+		return leftHeight + 1;	//simply adding 1 for root node
 	else
 		return rightHeight + 1;
 }
