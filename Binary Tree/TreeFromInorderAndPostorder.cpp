@@ -72,3 +72,89 @@ public:
         return ans;
     }
 };
+
+
+
+
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+
+// Posted this solution on LeetCode above solution passed 201/202 test cases
+
+/*class Solution {
+public:
+int findPosition(vector<int> inorder, int element)	//element = root determined from preorder
+    {
+        for (int i = 0; i < inorder.size(); i++) {
+            if (inorder[i] == element) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    TreeNode* SolveTree(vector<int> postorder, vector<int> inorder, int& postIdx, int inStIdx, int inEndIdx)
+    {
+        // Base case 
+        if (postIdx <0  || inStIdx > inEndIdx)
+            return NULL;
+
+        int element = postorder[postIdx--];	//decrementing root 
+        //declaring first index of preOrder as root
+        TreeNode* root = new TreeNode(element);
+        //find position of node in InOrder 
+        int position = findPosition(inorder, element);
+
+        //recursive calls for the remaining nodes 
+        root->right = SolveTree(postorder, inorder, postIdx, position + 1, inEndIdx);
+        root->left = SolveTree(postorder, inorder, postIdx, inStIdx, position - 1);
+
+        return root;
+    }
+
+    TreeNode* buildTree(vector<int>& inorder, vector<int>& postorder) {
+        int postIdx = postorder.size()-1;
+        TreeNode* ans = SolveTree(postorder, inorder, postIdx, 0, postorder.size() - 1);
+        return ans;
+    }
+   
+};*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
