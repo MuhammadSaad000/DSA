@@ -72,9 +72,6 @@ public:
 		}
 		cout << endl;
 	}
-
-	
-
 };
 
 
