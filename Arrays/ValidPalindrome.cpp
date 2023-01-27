@@ -23,7 +23,7 @@ bool ValidPalindrome(string s)
 			return false;
 		}
 		left++;
-		right++;
+		right--;
 	}
 	return true;
 }
